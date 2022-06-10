@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:id="@+id/news_item">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/news_item_cardview"
+        android:layout_width="364dp"
+        android:layout_height="@dimen/card_view"
+        style="@style/NewsCardView"
+        app:cardCornerRadius="@dimen/news_cardView_cornerRadius"
+        app:cardElevation="@dimen/elevation"
+        android:layout_marginBottom="8dp">
+
+        <RelativeLayout
+            android:id="@+id/newsImage_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/image_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:adjustViewBounds="true"
+                android:background="@color/black"/>
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/titleOfStory_text_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Text"
+            android:textColor="@color/black"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin_left"
+            android:maxLines="4"
+            android:textAppearance="?android:textAppearanceMedium"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="@dimen/activity_horizontal_margin_right"
+            android:layout_marginEnd="@dimen/activity_horizontal_margin_right"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:textSize="@dimen/minimal_text_size"
+                tools:text="Mar 6, 2010" />
+
+            <Button
+                android:id="@+id/favBtn"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:background="@drawable/ic_baseline_favorite_border_24"
+                android:layout_marginTop="4dp"
+                android:layout_gravity="end"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin_left"
+        android:orientation="horizontal"
+        android:layout_marginBottom="4dp">
+
+        <TextView
+            android:id="@+id/authorName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_alignParentLeft="true"
+            android:text="Author"
+            android:fontFamily="sans-serif-light"
+            android:textSize="@dimen/minimal_text_size"
+            android:layout_below="@id/titleOfStory_text_view"/>
+
+    </LinearLayout>
+
+</LinearLayout>
